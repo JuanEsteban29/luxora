@@ -3479,6 +3479,103 @@ section[id],
         gap: 10px;
     }
 
+    /* WHY LUXORA — 1 column on mobile */
+    .why-luxora-grid {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+    }
+
+    .why-pillar-card {
+        border-radius: 12px !important;
+        padding: 18px 16px !important;
+        margin-bottom: 0 !important;
+        background: #0E1D32 !important;
+        border: 1px solid rgba(212, 175, 55, 0.3) !important;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4) !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .why-pillar-num {
+        font-size: 12px !important;
+        margin-bottom: 8px !important;
+    }
+
+    .why-pillar-card h3 {
+        font-size: 14px !important;
+        margin-bottom: 8px !important;
+    }
+
+    .why-pillar-card p {
+        font-size: 13px !important;
+        line-height: 1.55 !important;
+    }
+
+    .why-luxora-section {
+        margin-top: 30px !important;
+        padding-top: 28px !important;
+    }
+
+    /* HOW WE WORK — 1 column on mobile */
+    .how-we-work-grid {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+    }
+
+    .work-step-card {
+        border-radius: 12px !important;
+        padding: 18px 16px !important;
+        background: #0E1D32 !important;
+        border: 1px solid rgba(212, 175, 55, 0.3) !important;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4) !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .work-step-num {
+        font-size: 11px !important;
+        padding: 3px 8px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .work-step-card h3 {
+        font-size: 16px !important;
+        margin-bottom: 8px !important;
+    }
+
+    .work-step-card p {
+        font-size: 13px !important;
+        line-height: 1.55 !important;
+    }
+
+    /* PRE-FOOTER CTA — mobile */
+    .pre-footer-cta {
+        padding: 48px 0 !important;
+    }
+
+    .pre-footer-cta h2 {
+        font-size: clamp(22px, 6vw, 32px) !important;
+        margin-bottom: 12px !important;
+    }
+
+    .pre-footer-cta p {
+        font-size: 14px !important;
+        margin-bottom: 24px !important;
+    }
+
+    .pre-footer-actions {
+        flex-direction: column !important;
+        gap: 12px !important;
+        width: 100% !important;
+    }
+
+    .pre-footer-actions .btn {
+        width: 100% !important;
+        text-align: center !important;
+        justify-content: center !important;
+        border-radius: 8px !important;
+    }
+
     .four-services {
         grid-template-columns: 1fr;
         gap: 12px;
