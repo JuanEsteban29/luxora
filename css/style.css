@@ -321,12 +321,17 @@ section[id],
     font-family: var(--font-mono);
     font-size: 11px;
     font-weight: 600;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
-    padding: 16px 28px;
+    padding: 14px 24px;
     border-radius: 0;
     cursor: pointer;
     transition: all 0.3s ease;
+    box-sizing: border-box !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    text-align: center;
 }
 
 .btn-primary {
@@ -2087,19 +2092,26 @@ section[id],
 }
 
 .product-actions {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
     gap: 8px;
+    width: 100%;
     margin-top: auto;
+    box-sizing: border-box;
 }
 
 .product-actions .btn {
-    flex: 1;
-    padding: 11px 8px;
+    width: 100%;
+    padding: 10px 6px;
     font-family: var(--font-mono);
     font-size: 9px;
     font-weight: 800;
-    letter-spacing: 1.2px;
+    letter-spacing: 1px;
     text-align: center;
+    justify-content: center;
+    box-sizing: border-box;
+    white-space: normal !important;
+    word-break: break-word !important;
 }
 
 /* 4-Step Order Workflow */
@@ -2331,19 +2343,26 @@ section[id],
 }
 
 .product-actions {
-    display: flex;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 8px;
+    width: 100%;
     margin-top: auto;
+    box-sizing: border-box;
 }
 
 .product-actions .btn {
-    flex: 1;
-    padding: 12px 10px;
+    width: 100%;
+    padding: 10px 6px;
     font-family: var(--font-mono);
-    font-size: 9.5px;
+    font-size: 9px;
     font-weight: 800;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
     text-align: center;
+    justify-content: center;
+    box-sizing: border-box;
+    white-space: normal !important;
+    word-break: break-word !important;
 }
 
 /* Modal Datasheet Overlay */
