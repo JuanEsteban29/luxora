@@ -539,10 +539,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (categoryPills) {
         categoryPills.addEventListener("click", (e) => {
-            if (e.target.classList.contains("pill-btn")) {
-                categoryPills.querySelectorAll(".pill-btn").forEach(btn => btn.classList.remove("active"));
-                e.target.classList.add("active");
-                activeCategory = e.target.dataset.category;
+            const btn = e.target.closest(".pill-btn");
+            if (btn && btn.dataset.category) {
+                activeCategory = btn.dataset.category;
+                renderCategoryPills();
                 renderProducts();
             }
         });

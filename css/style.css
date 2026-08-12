@@ -2068,6 +2068,10 @@ section[id],
     gap: 6px;
 }
 
+.pill-btn * {
+    pointer-events: none;
+}
+
 .pill-btn:hover,
 .pill-btn.active {
     background: var(--gold);
