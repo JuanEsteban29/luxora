@@ -55,7 +55,7 @@ mobileLinks.forEach(link => {
 const revealElements = document.querySelectorAll(".reveal, .reveal-left, .reveal-right");
 
 // Auto-stagger grid items
-document.querySelectorAll(".five-categories, .four-services, .markets-executive-grid, .partner-pillars-grid, .catalog-grid, .about-indicators").forEach(grid => {
+document.querySelectorAll(".five-categories, .four-services, .markets-executive-grid, .partner-pillars-grid, .catalog-grid, .about-indicators, .why-luxora-grid, .how-we-work-grid").forEach(grid => {
     const children = Array.from(grid.children);
     children.forEach((child, index) => {
         if (!child.classList.contains("reveal")) {
