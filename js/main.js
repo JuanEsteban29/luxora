@@ -50,9 +50,20 @@ mobileLinks.forEach(link => {
 });
 
 /* =========================================
-   SCROLL REVEAL OBSERVER
+   SCROLL REVEAL OBSERVER WITH STAGGERED CASCADE
 ========================================= */
-const revealElements = document.querySelectorAll(".reveal");
+const revealElements = document.querySelectorAll(".reveal, .reveal-left, .reveal-right");
+
+// Auto-stagger grid items
+document.querySelectorAll(".five-categories, .four-services, .markets-executive-grid, .partner-pillars-grid, .catalog-grid, .about-indicators").forEach(grid => {
+    const children = Array.from(grid.children);
+    children.forEach((child, index) => {
+        if (!child.classList.contains("reveal")) {
+            child.classList.add("reveal");
+        }
+        child.style.transitionDelay = `${(index % 5) * 0.1}s`;
+    });
+});
 
 if (revealElements.length > 0 && "IntersectionObserver" in window) {
     const revealObserver = new IntersectionObserver(
@@ -64,15 +75,15 @@ if (revealElements.length > 0 && "IntersectionObserver" in window) {
                 }
             });
         },
-        { threshold: 0.12 }
+        { threshold: 0.1 }
     );
 
-    revealElements.forEach(element => {
+    document.querySelectorAll(".reveal, .reveal-left, .reveal-right").forEach(element => {
         revealObserver.observe(element);
     });
 } else {
     // Fallback si IntersectionObserver no está disponible
-    revealElements.forEach(element => {
+    document.querySelectorAll(".reveal, .reveal-left, .reveal-right").forEach(element => {
         element.classList.add("visible");
     });
 }

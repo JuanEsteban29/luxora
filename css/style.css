@@ -3014,15 +3014,96 @@ section[id],
     pointer-events: none;
 }
 
+/* =========================================
+   EXECUTIVE ANIMATION SUITE & MICRO-INTERACTIONS
+========================================= */
+
+@keyframes routePulse {
+    0%, 100% { stroke-dashoffset: 0; opacity: 0.65; }
+    50% { stroke-dashoffset: -40; opacity: 1; }
+}
+
+@keyframes btnShimmer {
+    0% { left: -100%; opacity: 0; }
+    50% { opacity: 0.8; }
+    100% { left: 180%; opacity: 0; }
+}
+
+@keyframes pulseDot {
+    0%, 100% { transform: scale(1); opacity: 0.8; box-shadow: 0 0 10px var(--gold); }
+    50% { transform: scale(1.3); opacity: 1; box-shadow: 0 0 24px var(--gold); }
+}
+
+.map-routes-svg path {
+    stroke-dasharray: 6 4;
+    animation: routePulse 10s linear infinite;
+}
+
+.btn-primary, .btn-outline, .nav-cta {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::after, .btn-outline::after, .nav-cta::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+    transform: skewX(-20deg);
+    pointer-events: none;
+}
+
+.btn-primary:hover::after, .btn-outline:hover::after, .nav-cta:hover::after {
+    animation: btnShimmer 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
 .reveal {
     opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translateY(28px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
 }
 
 .reveal.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-35px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+.reveal-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(35px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+.reveal-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.service-card, .category-card, .market-exec-card, .partner-pillar-card, .product-card {
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease, box-shadow 0.35s ease, background-color 0.35s ease !important;
+}
+
+.service-card:hover, .category-card:hover, .market-exec-card:hover, .partner-pillar-card:hover, .product-card:hover {
+    transform: translateY(-4px) scale(1.01) !important;
+    border-color: var(--gold) !important;
+    box-shadow: 0 14px 32px rgba(7, 16, 30, 0.7), 0 0 20px rgba(212, 175, 55, 0.2) !important;
 }
 
 /* =========================================
