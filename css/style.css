@@ -3096,48 +3096,65 @@ section[id],
 
 @media (max-width: 768px) {
     .section {
-        padding: 60px 0;
+        padding: 36px 0 !important;
+    }
+
+    .hero {
+        padding: 95px 5% 0 5% !important;
+        min-height: auto !important;
+    }
+
+    .hero-container {
+        margin-bottom: 24px !important;
     }
 
     .hero-metadata-badge {
-        font-size: 9.5px;
+        font-size: 9px;
         letter-spacing: 1.5px;
+        margin-bottom: 12px !important;
     }
 
     .hero-content h1 {
-        font-size: clamp(26px, 7vw, 38px);
-        line-height: 1.25;
+        font-size: clamp(25px, 6.8vw, 36px);
+        line-height: 1.2;
     }
 
     .hero-text {
-        font-size: 14.5px;
-        line-height: 1.6;
+        font-size: 14px;
+        line-height: 1.55;
+        margin-top: 14px !important;
     }
 
     .hero-actions {
         flex-direction: column;
         width: 100%;
-        gap: 12px;
+        gap: 10px;
+        margin-top: 22px !important;
     }
 
     .hero-actions .btn {
         width: 100%;
         text-align: center;
         justify-content: center;
-        padding: 14px 20px;
+        padding: 13px 18px;
     }
 
     .hero-bottom {
         flex-direction: column;
-        gap: 16px;
+        gap: 12px;
         align-items: flex-start;
-        padding: 24px;
+        padding: 16px 5%;
         text-align: left;
     }
 
     .hero-bottom > div {
         width: 100%;
         justify-content: flex-start;
+    }
+
+    .section-heading.centered,
+    .section-heading {
+        margin-bottom: 22px !important;
     }
 
     .about-indicators {
@@ -3389,6 +3406,35 @@ section[id],
 }
 
 @media (max-width: 480px) {
+    .section {
+        padding: 24px 0 !important;
+    }
+
+    .hero {
+        padding: 85px 4% 0 4% !important;
+    }
+
+    .hero-container {
+        margin-bottom: 16px !important;
+    }
+
+    .section-heading.centered,
+    .section-heading {
+        margin-bottom: 16px !important;
+    }
+
+    .category-card-thumb {
+        height: 150px !important;
+    }
+
+    .footer-top {
+        gap: 24px !important;
+    }
+
+    .footer-links {
+        gap: 18px !important;
+    }
+
     .logo img {
         height: 44px !important;
         max-height: 44px !important;
