@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commercial Product Catalog | Luxora Global Group</title>
+    <meta name="description" content="Explore verified wholesale inventory product lots available for international distribution and export across Beauty, Toys, Pet Supplies, Home & Lifestyle, and Tools.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- =========================================
+         NAVBAR
+    ========================================== -->
+    <header class="navbar" id="navbar">
+        <a href="index.html" class="logo">
+            <img src="assets/logo.png" alt="Luxora Global Group">
+        </a>
+
+        <nav class="nav-links">
+            <a href="index.html#home">HOME</a>
+            <a href="index.html#about">ABOUT US</a>
+            <a href="index.html#services">SERVICES</a>
+            <a href="catalog.html" class="active">CATEGORIES</a>
+            <a href="index.html#markets">MARKETS</a>
+            <a href="index.html#partners">PARTNERSHIPS</a>
+        </nav>
+
+        <a href="contact.html" class="nav-cta">
+            REQUEST A QUOTE
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- =========================================
+         MOBILE MENU
+    ========================================== -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html#home">HOME</a>
+        <a href="index.html#about">ABOUT US</a>
+        <a href="index.html#services">SERVICES</a>
+        <a href="catalog.html">CATEGORIES</a>
+        <a href="index.html#markets">MARKETS</a>
+        <a href="index.html#partners">PARTNERSHIPS</a>
+        <a href="contact.html" class="mobile-cta">
+            REQUEST A QUOTE
+        </a>
+    </div>
+
+    <main>
+        <!-- CATALOG HERO SECTION -->
+        <section class="catalog-hero">
+            <div class="section-container">
+                <span class="section-number">B2B COMMERCIAL MANIFESTO | LUXORA GLOBAL GROUP</span>
+                <h1>
+                    Inventory & Opportunities Catalog
+                </h1>
+                <p style="color: var(--gray-light); max-width: 800px; margin-top: 12px; font-size: 15.5px; line-height: 1.7;">
+                    Monitor and query verified lot availability for import, export, and international commercial distribution.
+                </p>
+
+                <!-- KPI COUNTER BAR -->
+                <div class="catalog-stats-row">
+                    <div class="catalog-stat-card">
+                        <div class="catalog-stat-val">25</div>
+                        <div class="catalog-stat-lbl">Verified Products</div>
+                    </div>
+                    <div class="catalog-stat-card">
+                        <div class="catalog-stat-val">05</div>
+                        <div class="catalog-stat-lbl">Commercial Sectors</div>
+                    </div>
+                    <div class="catalog-stat-card">
+                        <div class="catalog-stat-val">AZ, USA</div>
+                        <div class="catalog-stat-lbl">Logistics Hub</div>
+                    </div>
+                    <div class="catalog-stat-card">
+                        <div class="catalog-stat-val">100%</div>
+                        <div class="catalog-stat-lbl">Origin Guarantee</div>
+                    </div>
+                </div>
+
+                <!-- COMMERCIAL CONTROL CONSOLE TOOLBAR -->
+                <div class="catalog-toolbar">
+                    <div class="catalog-toolbar-top">
+                        <div class="search-box">
+                            <input type="text" id="searchInput" placeholder="Search by product name, code, or category..." aria-label="Search products">
+                        </div>
+                        <div class="catalog-sort-box">
+                            <label for="sortSelect">Sort by:</label>
+                            <select id="sortSelect">
+                                <option value="sku">Product Code</option>
+                                <option value="name">Name (A-Z)</option>
+                                <option value="category">Category</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="category-pills" id="categoryPills">
+                        <!-- Category pills dynamically rendered by js/catalog.js -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUCTS SECTION -->
+        <section class="section" style="padding-top: 30px;">
+            <div class="section-container">
+                <!-- STATUS BAR -->
+                <div class="catalog-status-bar">
+                    <span id="resultsCount">Showing <strong>25 of 25</strong> available products</span>
+                    <span>View: <strong>Commercial Catalog</strong></span>
+                </div>
+
+                <div class="catalog-grid" id="catalogGrid">
+                    <!-- Products dynamically rendered by js/catalog.js -->
+                </div>
+
+                <!-- COMMERCIAL QUOTE CALLOUT BANNER -->
+                <div class="categories-cta" style="margin-top: 40px; margin-bottom: 60px;">
+                    <div class="categories-cta-content">
+                        <span class="categories-badge">PERSONALIZED ATTENTION</span>
+                        <h3>Require a Wholesale Quote or Commercial Guidance?</h3>
+                        <p>We offer commercial terms tailored to your purchasing volume and export destination.</p>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary">REQUEST A QUOTE →</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- SPECIFICATION SHEET & PRODUCT DETAIL MODAL -->
+    <div class="datasheet-modal" id="datasheetModal" role="dialog" aria-modal="true">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModal" aria-label="Close specification sheet">&times;</button>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(212, 175, 55, 0.25); padding-bottom: 12px; margin-bottom: 20px;">
+                <span style="font-family: var(--font-mono); font-size: 10px; font-weight: 800; color: var(--gold); letter-spacing: 2px; text-transform: uppercase;">
+                    B2B INVENTORY SPECIFICATION SHEET
+                </span>
+                <span style="font-family: var(--font-mono); font-size: 10px; font-weight: 800; color: var(--white); background: rgba(212, 175, 55, 0.15); border: 1px solid rgba(212, 175, 55, 0.3); padding: 3px 8px;" id="modalSku">
+                    SKU-0000
+                </span>
+            </div>
+            
+            <div class="modal-img-container">
+                <img id="modalImg" src="" alt="Product image">
+            </div>
+
+            <div class="modal-header">
+                <h2 style="color: var(--white); font-size: 22px; font-family: var(--font-serif); font-weight: 800; margin-top: 4px; line-height: 1.3;" id="modalTitle">
+                    Product Name
+                </h2>
+            </div>
+            
+            <p style="color: var(--gray-light); font-size: 13.5px; line-height: 1.6; margin-bottom: 20px;" id="modalDesc">
+                Full description of inventory product.
+            </p>
+            
+            <table class="modal-table">
+                <tbody>
+                    <tr>
+                        <th>Commercial Category</th>
+                        <td id="modalCategory">-</td>
+                    </tr>
+                    <tr>
+                        <th>Internal Product Code</th>
+                        <td id="modalCodeDisplay">-</td>
+                    </tr>
+                    <tr>
+                        <th>ASIN / Ref Number</th>
+                        <td id="modalAsin">-</td>
+                    </tr>
+                    <tr>
+                        <th>Factory Condition</th>
+                        <td id="modalCondition">New / Factory Sealed</td>
+                    </tr>
+                    <tr>
+                        <th>Commercial Packaging</th>
+                        <td id="modalPackaging">Original Distribution Box</td>
+                    </tr>
+                    <tr>
+                        <th>Availability</th>
+                        <td style="color: var(--gold); font-weight: 700;">Verified Inventory in Dispatch Center</td>
+                    </tr>
+                    <tr>
+                        <th>Commercial Terms</th>
+                        <td>Wholesale Sale / International Export</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div style="margin-top: 25px; display: flex; gap: 15px;">
+                <a href="contact.html" id="modalQuoteBtn" class="btn btn-primary" style="flex: 1; text-align: center; font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 1.5px;">
+                    REQUEST QUOTE FOR THIS LOT →
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+    <footer class="footer">
+        <div class="section-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="assets/logo.png" alt="Luxora Global Group">
+                    <p>
+                        Connecting quality products with global opportunities.
+                    </p>
+                    <span style="display: block; margin-top: 8px; color: var(--gold); font-size: 10px; letter-spacing: 2px; text-transform: uppercase;">
+                        IMPORT • DISTRIBUTION • EXPORT
+                    </span>
+                </div>
+
+                <div class="footer-links">
+                    <div>
+                        <span>NAVIGATION</span>
+                        <a href="index.html#home">Home</a>
+                        <a href="index.html#about">About Us</a>
+                        <a href="index.html#services">Services</a>
+                    </div>
+
+                    <div>
+                        <span>BUSINESS</span>
+                        <a href="catalog.html">Categories</a>
+                        <a href="index.html#markets">Markets</a>
+                        <a href="index.html#partners">Partnerships</a>
+                    </div>
+
+                    <div>
+                        <span>CONTACT</span>
+                        <a href="contact.html">Contact</a>
+                        <a href="contact.html">Request a Quote</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>
+                    © 2026 Luxora Global Group. All Rights Reserved.
+                </span>
+                <div>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/catalog.js"></script>
+</body>
+</html>
