@@ -2990,31 +2990,349 @@ section[id],
 }
 
 /* =========================================
-   RESPONSIVE BREAKPOINTS
+   COMPREHENSIVE MOBILE & TABLET RESPONSIVE SYSTEM
 ========================================= */
 
+@media (max-width: 1200px) {
+    .section-container {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    
+    .five-categories {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .partner-pillars-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .markets-executive-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 1024px) {
-    .nav-links, .nav-cta { display: none; }
-    .menu-toggle { display: flex; }
+    .navbar {
+        padding: 16px 5%;
+    }
 
-    .hero { padding: 140px 6% 100px; }
-    .hero-network { display: none; }
+    .nav-links, .nav-cta {
+        display: none !important;
+    }
 
-    .about-grid, .contact-grid {
+    .menu-toggle {
+        display: flex !important;
+    }
+
+    .hero {
+        padding: 140px 5% 80px;
+        min-height: auto;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(30px, 6vw, 50px);
+    }
+
+    .about-grid, 
+    .contact-grid {
         grid-template-columns: 1fr;
         gap: 40px;
     }
 
-    .editorial-report-grid {
+    .corporate-strategy-grid {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 24px;
+    }
+
+    .four-services {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .five-categories {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .markets-executive-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .catalog-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 768px) {
-    .form-row { grid-template-columns: 1fr; }
-    .categories-grid { grid-template-columns: 1fr; }
-    .hero-bottom { flex-direction: column; gap: 10px; align-items: center; text-align: center; }
-    .categories-cta, .about-cta-banner { padding: 30px 25px; flex-direction: column; align-items: flex-start; }
-    .contact-form-wrapper { padding: 30px 20px; }
+    .section {
+        padding: 60px 0;
+    }
+
+    .hero-metadata-badge {
+        font-size: 9.5px;
+        letter-spacing: 1.5px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(26px, 7vw, 38px);
+        line-height: 1.25;
+    }
+
+    .hero-text {
+        font-size: 14.5px;
+        line-height: 1.6;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        padding: 14px 20px;
+    }
+
+    .hero-bottom {
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+        padding: 24px;
+        text-align: left;
+    }
+
+    .hero-bottom > div {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .about-indicators {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .four-services {
+        grid-template-columns: 1fr;
+    }
+
+    .services-cta-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 28px 20px;
+    }
+
+    .services-cta-banner .btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .five-categories {
+        grid-template-columns: 1fr;
+    }
+
+    .category-card-thumb {
+        height: 140px;
+    }
+
+    .categories-cta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 28px 20px;
+    }
+
+    .categories-cta .btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .markets-map-showcase {
+        padding: 20px 15px;
+    }
+
+    .map-showcase-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .map-visual-container {
+        height: 320px;
+    }
+
+    .map-hub-pin .pin-card {
+        padding: 8px 10px;
+        min-width: 160px;
+    }
+
+    .map-hub-pin .pin-country {
+        font-size: 8px;
+    }
+
+    .map-hub-pin strong {
+        font-size: 10px;
+    }
+
+    .partner-pillars-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .partner-cta-box {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 28px 20px;
+    }
+
+    .partner-cta-buttons {
+        width: 100%;
+    }
+
+    .partner-cta-buttons .btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .contact-form-wrapper {
+        padding: 24px 18px;
+    }
+
+    /* Catalog Responsive Adjustments */
+    .catalog-hero {
+        padding: 130px 5% 40px;
+    }
+
+    .catalog-stats-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .catalog-toolbar-top {
+        flex-direction: column;
+        gap: 16px;
+        align-items: stretch;
+    }
+
+    .search-box input {
+        width: 100%;
+    }
+
+    .catalog-sort-box {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .category-pills {
+        display: flex;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 8px;
+        gap: 8px;
+    }
+
+    .category-pills::-webkit-scrollbar {
+        height: 3px;
+    }
+
+    .category-pills::-webkit-scrollbar-thumb {
+        background: var(--gold);
+        border-radius: 3px;
+    }
+
+    .catalog-status-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .catalog-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .product-actions .btn {
+        width: 100%;
+    }
+
+    .modal-content {
+        width: 94%;
+        padding: 24px 18px;
+        max-height: 88vh;
+        overflow-y: auto;
+    }
+
+    .modal-table th, .modal-table td {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        gap: 36px;
+    }
+
+    .footer-links {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 14px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        height: 44px !important;
+        max-height: 44px !important;
+    }
+
+    .navbar.scrolled .logo img {
+        height: 40px !important;
+        max-height: 40px !important;
+    }
+
+    .hero-content h1 {
+        font-size: 24px;
+    }
+
+    .section-heading h2,
+    .contact-info h2 {
+        font-size: 24px !important;
+    }
+
+    .catalog-stats-row {
+        grid-template-columns: 1fr;
+    }
+
+    /* Prevent iOS auto-zoom on input focus */
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+        font-size: 16px !important;
+    }
+
+    .btn {
+        font-size: 10px !important;
+        padding: 13px 18px !important;
+    }
 }
