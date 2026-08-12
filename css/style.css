@@ -3182,7 +3182,6 @@ section[id],
 
     /* Mobile Rounded Card System (Matching Reference Screenshot) */
     .service-card,
-    .category-card,
     .market-exec-card,
     .partner-pillar-card,
     .about-indicators > div,
@@ -3201,11 +3200,36 @@ section[id],
         min-height: auto !important;
     }
 
+    .category-card {
+        border-radius: 12px !important;
+        padding: 0 0 18px 0 !important;
+        margin-bottom: 12px !important;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4) !important;
+        background: #0E1D32 !important;
+        border: 1px solid rgba(212, 175, 55, 0.3) !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        min-height: auto !important;
+        overflow: hidden !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
     .category-card-thumb {
-        border-radius: 10px 10px 0 0 !important;
-        height: 150px !important;
-        margin: -18px -16px 14px -16px !important;
-        width: calc(100% + 32px) !important;
+        border-radius: 11px 11px 0 0 !important;
+        height: 170px !important;
+        margin: 0 0 14px 0 !important;
+        width: 100% !important;
+        position: relative !important;
+        overflow: hidden !important;
+        display: block !important;
+    }
+
+    .category-card-img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        display: block !important;
     }
 
     .category-card-top,
@@ -3213,8 +3237,8 @@ section[id],
     .category-card p,
     .category-spec-chips,
     .category-bottom-tag {
-        margin-left: 0 !important;
-        margin-right: 0 !important;
+        margin-left: 16px !important;
+        margin-right: 16px !important;
     }
 
     .about-indicators {
